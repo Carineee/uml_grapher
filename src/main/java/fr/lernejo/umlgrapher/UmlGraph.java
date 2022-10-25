@@ -2,9 +2,9 @@ package fr.lernejo.umlgrapher;
 
 public class UmlGraph {
 
-    private final Class<?>[] Cname;
+    private final Class[] Cname;
 
-    public UmlGraph(Class<?>[] Cname){
+    public UmlGraph(Class[] Cname){
         this.Cname = Cname;
     }
 
