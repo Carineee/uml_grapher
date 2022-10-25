@@ -1,6 +1,10 @@
 package fr.lernejo.umlgrapher;
 
 public class UmlGraph {
-    public UmlGraph(Class<fr.lernejo.UmlGraphTests.Machin> machinClass) {
+    private final Class<?>[] classes;
+
+    public UmlGraph(Class<?>[] classes){
+        this.classes = classes;
     }
+    
 }
