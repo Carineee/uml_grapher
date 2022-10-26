@@ -18,7 +18,7 @@ public class Launcher implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         UmlGraph graph = new UmlGraph(Cname);
-        System.out.println(graph.as(GraphType.valueOf(graphType)));
+        System.out.println(graph.as(GraphType.valueOf(String.valueOf(graphType))));
         return null;
     }
 
