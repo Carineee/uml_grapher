@@ -2,16 +2,16 @@ package fr.lernejo.umlgrapher;
 
 public class UmlGraph {
 
-    private final Class[] Cname;
+    private final Class<?>[] classes;
 
-    public UmlGraph(Class[] Cname){
-        this.Cname = Cname;
+    public UmlGraph(Class<?>[] classes){
+        this.classes = classes;
     }
 
     public String as (GraphType graphType){
         String answer = "classDiagram";
 
-        for (Class<?> myClass : Cname){
+        for (Class<?> myClass : classes){
             if (graphType == GraphType.Mermaid) {
                 answer += "class" + myClass.getSimpleName() + "{\n";
                 if (myClass.isInterface()){
