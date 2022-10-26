@@ -10,14 +10,14 @@ import java.util.concurrent.Callable;
 public class Launcher implements Callable<Integer> {
 
     @Option(names = {"-c", "--classes"}, required = true, description = "Select the class to analyse")
-    private final Class<?>[] CName;
+    private final Class[] Cname = null;
 
     @Option(names = {"-g", "--graph-type"}, defaultValue = "Mermaid", description = "Select type of graph that you want in the output")
-    private final String graphType = GraphType.Mermaid;
+    private final GraphType graphType = GraphType.Mermaid;
 
     @Override
     public Integer call() throws Exception {
-        UmlGraph graph = new UmlGraph(CName);
+        UmlGraph graph = new UmlGraph(Cname);
         System.out.println(graph.as(GraphType.valueOf(graphType)));
         return null;
     }
