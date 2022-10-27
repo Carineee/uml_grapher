@@ -7,6 +7,7 @@ public class InternalGraphRepresentation {
 
     private final Class classInterGraph;
     InternalGraphRepresentation(Class classInterGraph){
+
         this.classInterGraph = classInterGraph;
     }
 
@@ -19,7 +20,8 @@ public class InternalGraphRepresentation {
         }
         return recursiveList;
     }
-    public List<Class> whats_your_relation(){
+
+    public List<Class> relation(){
         List<Class> List = new ArrayList<Class>();
         List = recursive_relation(List,this.classInterGraph);
         return List;
