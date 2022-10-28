@@ -11,25 +11,22 @@ import java.util.TreeSet;
 import java.util.concurrent.Callable;
 
 public class UmlType {
-/*
-    private final Class my_class;
+
     private final String name;
-    private final String packageName;
-    UmlType(Class my_class ){
-        this.my_class = my_class;
-        this.name = my_class.getSimpleName();
-        this.packageName = my_class.getPackageName();
-    }
-    public Class my_class(){ return this.my_class;}
-    public String name() {
-        return this.name;
+    private final String PackageName;
+    UmlType( Class classes)
+    {
+        this.name = classes.getSimpleName();
+        this.PackageName = classes.getPackageName();
     }
 
-    public String packageName() {
-        return this.packageName;
+    public String name(){
+        return this.name();
     }
 
-*/
+    public String PackageName(){
+        return this.PackageName();
+    }
 
     private final Set<Class> types = new TreeSet<>(Comparator
         .<Class, String>comparing(Class::getSimpleName)
